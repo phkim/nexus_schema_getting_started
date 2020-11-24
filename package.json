@@ -1,0 +1,9 @@
+{
+  "name": "nexus_schema_getting_started",
+  "version": "1.0.0",
+  "description": "nexusjs.org getting started",
+  "main": "index.js",
+  "repository": "https://github.com/phkim/nexus_schema_getting_started.git",
+  "author": "philjae <philjae@gmail.com>",
+  "license": "MIT"
+}
