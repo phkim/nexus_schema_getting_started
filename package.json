@@ -33,7 +33,7 @@
     "introspect": "prisma introspect",
     "migrate_save": "prisma migrate save --experimental",
     "migrate_up": "prisma migrate up --experimental",
-    "test": "yarn generate && jest"
+    "test": "yarn generate && jest --coverage"
   },
   "jest": {
     "preset": "ts-jest",
