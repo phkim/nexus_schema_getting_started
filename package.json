@@ -5,5 +5,45 @@
   "main": "index.js",
   "repository": "https://github.com/phkim/nexus_schema_getting_started.git",
   "author": "philjae <philjae@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@nexus/schema": "^0.18.0",
+    "@prisma/client": "^2.12.0",
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.12.0",
+    "@types/jest": "^26.0.15",
+    "@types/pg": "^7.14.7",
+    "get-port": "^5.1.1",
+    "graphql-request": "^3.3.0",
+    "jest": "^26.6.3",
+    "nanoid": "^3.1.18",
+    "pg": "^8.5.1",
+    "prettier": "^2.2.0",
+    "ts-jest": "^26.4.4",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "dev": "SERVER_PORT=5143 ts-node-dev --transpile-only --no-notify api/app.ts",
+    "build": "tsc",
+    "generate": "prisma generate",
+    "introspect": "prisma introspect",
+    "migrate_save": "prisma migrate save --experimental",
+    "migrate_up": "prisma migrate up --experimental",
+    "test": "yarn generate && jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "warnOnly": true
+        }
+      }
+    },
+    "testEnvironment": "node"
+  }
 }
